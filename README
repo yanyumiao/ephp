@@ -1,0 +1,13 @@
+# about
+so easy php freamwork
+
+# vist example
+localhost/ctrl/act?query_string
+
+# nginx.conf
+if (!-d $request_filename) {
+    rewrite ^/([a-z]+)/([a-z]+)/?(.*)$ /index.php?ctrl=$1&act=$2$3 last;
+    break;
+}
+	
+
