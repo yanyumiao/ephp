@@ -1,6 +1,6 @@
 <?php
 /**
- * Ephp is an open source php freamework, so easy!!!
+ * Ephp is an open source php framework, so easy!!!
  * git@github.com:YanYuMiao/Ephp.git
  * (c) 2015 YanYuMiao
  */
@@ -8,6 +8,7 @@
 // const
 define('SYS_PATH', './sys/');
 define('APP_PATH', './app/');
+define('MODEL_PATH', APP_PATH.'model/');
 define('CTRL_PATH', APP_PATH.'ctrl/');
 
 // route
@@ -19,8 +20,12 @@ unset($_GET['act']);
 // require
 require SYS_PATH.'function.php';
 require APP_PATH.'dbconfig.php';
+require MODEL_PATH.'model.php';
 require CTRL_PATH.'ctrl.php';
 require CTRL_PATH.$ctrl.'.php';
+
+//
+spl_autoload_register('autoload');
 
 // run
 $app=new $ctrl;
