@@ -19,7 +19,7 @@ unset($_GET['act']);
 
 // require
 require SYS_PATH.'function.php';
-require APP_PATH.'dbconfig.php';
+require APP_PATH.'config.php';
 require MODEL_PATH.'model.php';
 require CTRL_PATH.'ctrl.php';
 require CTRL_PATH.$ctrl.'.php';
