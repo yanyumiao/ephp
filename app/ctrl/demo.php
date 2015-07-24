@@ -1,4 +1,5 @@
 <?php
+
 class demo extends ctrl {
 	public function index(){
 		echo 'Welcome to Ephp';
@@ -15,8 +16,10 @@ class demo extends ctrl {
 		$usermodel=M('usermodel');
 		$ret=$usermodel->adduser($user);
 		
+		$usermodel2=M('usermodel');
 		echo '<pre>';
 		print_r($usermodel);
+		print_r($usermodel2);
 		print_r($ret);
 	}
 	

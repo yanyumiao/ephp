@@ -1,4 +1,5 @@
 <?php 
+
 class usermodel extends model {
 	
 	public function adduser($user){
