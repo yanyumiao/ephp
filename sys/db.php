@@ -1,6 +1,6 @@
 <?php 
 
-// 单例
+// Singleton pattern
 class db {
 	private static $redis_instance;
 	private static $mysql_instance;
