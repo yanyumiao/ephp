@@ -11,6 +11,8 @@ define('APP_PATH', './app/');
 define('MODEL_PATH', APP_PATH.'model/');
 define('CTRL_PATH', APP_PATH.'ctrl/');
 
+// global
+
 // route
 $ctrl=$_GET['ctrl'];
 unset($_GET['ctrl']);
