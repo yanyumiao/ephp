@@ -1,13 +1,34 @@
-# about
+# About
 Ephp, so easy!!!
 
-# vist example
-localhost/ctrl/act?query_string
+# Character
+(1) easy & fast
+(2) don't use namespace
+(3) Nginx or Apache rewrite the url, not php
 
-# nginx.conf
+# Code rule
+(1) variable name use lowercase and underline
+(2) model class
+1. file name "usermodel.php" class name "usermodel"
+2. only model class have CONST
+
+# Env
+Linux Nginx PHP Redis
+
+# Request
+(1) php extension phpredis
+
+# Nginx.conf
 if (!-d $request_filename) {
     rewrite ^/([a-z]+)/([a-z]+)/?(.*)$ /index.php?ctrl=$1&act=$2$3 last;
     break;
 }
-	
 
+# Vist example
+localhost/ctrl/act?query_string
+	
+# Copyright
+(c) 2015 YanYuMiao
+
+# Project address
+https://github.com/YanYuMiao/Ephp
