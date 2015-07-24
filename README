@@ -4,7 +4,7 @@ Suitable for use as Game service or App service
 
 # Character
 (1) easy & fast
-(2) don't use namespace
+(2) no namespace
 (3) Nginx or Apache rewrite the url, not php
 
 # Code rule
@@ -14,7 +14,7 @@ Suitable for use as Game service or App service
 2. only model class have CONST
 
 # Env
-Linux Nginx PHP Redis
+Linux Nginx PHP Redis MySQL
 
 # Request
 (1) php extension phpredis
