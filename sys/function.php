@@ -6,7 +6,6 @@ function autoload($class){
 
 // return a model
 function M($class){
-	require_once MODEL_PATH.$class.'.php';
 	return new $class;
 }
 
