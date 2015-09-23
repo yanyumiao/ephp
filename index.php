@@ -13,9 +13,9 @@ define('CTRL_PATH', APP_PATH.'ctrl/');
 
 // route
 $ctrl=$_GET['ctrl'];
-unset($_GET['ctrl']);
+//unset($_GET['ctrl']);
 $act=$_GET['act'];
-unset($_GET['act']);
+//unset($_GET['act']);
 
 // require
 require APP_PATH.'config.php';
