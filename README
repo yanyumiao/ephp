@@ -1,6 +1,5 @@
 # About
 Ephp, so easy!!!
-Suitable for use as Game service or App service 
 
 # Features
 (1) easy & fast
@@ -14,18 +13,19 @@ Suitable for use as Game service or App service
 2. only model class have CONST
 
 # Env
-Linux Nginx PHP Redis MySQL
+Linux Nginx & Apache PHP Redis MySQL
 
-# Request
-(1) php extension phpredis
+# PHP Extension
+phpredis & PDO_MYSQL
 
-# Nginx.conf
+# Rewrite rule
+(1) Nginx http.conf:
 if (!-d $request_filename) {
     rewrite ^/([a-z]+)/([a-z]+)/?(.*)$ /index.php?ctrl=$1&act=$2$3 last;
     break;
 }
 
-# Apache
+(2) Apache .htaccess:
 <IfModule mod_rewrite.c>
 	RewriteEngine on
 	RewriteCond %{REQUEST_FILENAME} !-d
