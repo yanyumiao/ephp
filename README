@@ -25,6 +25,14 @@ if (!-d $request_filename) {
     break;
 }
 
+# Apache
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^([a-z]+)/([a-z]+)/?(.*)$ index.php?ctrl=$1&act=$2$3& [L]
+</IfModule>
+
 # Vist example
 localhost/ctrl/act?query_string
 	
