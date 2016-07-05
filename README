@@ -2,12 +2,12 @@
 Ephp, easy php framework
 
 # Rewrite rule
-1. Nginx (http.conf)
+Nginx(http.conf):
 if (!-d $request_filename) {
     rewrite ^/(.*)$ /index.php/$1 last;
     break;
 }
-2. Apache (.htaccess)
+Apache(.htaccess): 
 <IfModule mod_rewrite.c>
 	RewriteEngine on
 	RewriteCond %{REQUEST_FILENAME} !-d
