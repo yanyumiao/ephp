@@ -1,6 +1,6 @@
 <?php
 
-class demo extends ctrl {
+class index extends ctrl {
 	public function index(){
 		echo 'Welcome to Ephp';
 	}

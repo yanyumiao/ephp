@@ -23,4 +23,4 @@ require CTRL_PATH.'ctrl.php';
 spl_autoload_register('autoload');
 
 // run
-
+App::run();
