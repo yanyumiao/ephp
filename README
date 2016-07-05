@@ -1,27 +1,10 @@
 # About
-Ephp, so easy!!!
-
-# Features
-(1) easy & fast
-(2) no namespace
-(3) Nginx or Apache rewrite the url, not php
-
-# Code rule
-(1) variable name use lowercase and underline
-(2) model class
-1. file name "usermodel.php" class name "usermodel"
-2. only model class have CONST
-
-# Env
-Linux Nginx & Apache PHP Redis MySQL
-
-# PHP Extension
-phpredis & PDO_MYSQL
+Ephp, easy php framework
 
 # Rewrite rule
 (1) Nginx http.conf:
 if (!-d $request_filename) {
-    rewrite ^/([a-z]+)/([a-z]+)/?(.*)$ /index.php?ctrl=$1&act=$2$3 last;
+    rewrite ^/(.*)$ /index.php/$1 last;
     break;
 }
 
@@ -30,14 +13,9 @@ if (!-d $request_filename) {
 	RewriteEngine on
 	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule ^([a-z]+)/([a-z]+)/?(.*)$ index.php?ctrl=$1&act=$2$3& [L]
+	RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
 
-# Vist example
-localhost/ctrl/act?query_string
-	
 # Copyright
 (c) 2015 YanYuMiao
 
-# Project address
-https://github.com/YanYuMiao/Ephp

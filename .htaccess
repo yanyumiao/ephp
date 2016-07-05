@@ -2,5 +2,5 @@
  RewriteEngine on
  RewriteCond %{REQUEST_FILENAME} !-d
  RewriteCond %{REQUEST_FILENAME} !-f
- RewriteRule ^([a-z]+)/([a-z]+)/?(.*)$ index.php?ctrl=$1&act=$2$3& [L]
+ RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
