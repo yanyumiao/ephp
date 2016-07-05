@@ -12,7 +12,7 @@ define('MODEL_PATH', APP_PATH.'model/');
 define('CTRL_PATH', APP_PATH.'ctrl/');
 
 // require core file
-require APP_PATH.'app.class.php';
+require SYS_PATH.'app.php';
 require APP_PATH.'config.php';
 require SYS_PATH.'function.php';
 require SYS_PATH.'db.php';
