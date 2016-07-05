@@ -16,9 +16,13 @@ class App {
 
 	public static function run() {
 		$router=self::router();
+		var_dump($router);
+
 		$ctrl=$router['ctrl'];
 		$action=$router['action'];
-		$class=new $ctrl();
+		
+		// autoload
+		//$class=new $ctrl();
 	}
 }
 
