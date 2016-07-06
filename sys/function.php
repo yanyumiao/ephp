@@ -1,7 +1,12 @@
 <?php
 
 function autoload($class){
-	//require_once MODEL_PATH.$class.'.php';
-}
-
+	if(file_exists(PATH_CTRL.$class.'.php')){
+		require_once PATH_CTRL.$class.'.php';
+	}elseif(file_exists(PATH_MODEL.$class.'.php')){
+		require_once PATH_MODEL.$class.'.php';
+	}else{
+		// 抛异常
+	}
+}	
 
