@@ -16,12 +16,10 @@ require PATH_APP.'config.php';
 require PATH_SYS.'app.php';
 require PATH_SYS.'function.php';
 require PATH_SYS.'ctrl.php';
-require PATH_SYS.'model.php';
 require PATH_SYS.'db.php';
 
 //
 spl_autoload_register('autoload');
-//set_exception_handler('exception_handle');
 
 //
 App::run();
