@@ -5,7 +5,6 @@
  *
  */
 
-
 //
 define('PATH_SYS', './sys/');
 define('PATH_APP', './app/');
@@ -22,6 +21,7 @@ require PATH_SYS.'db.php';
 
 //
 spl_autoload_register('autoload');
+//set_exception_handler('exception_handle');
 
 //
 App::run();

@@ -11,12 +11,12 @@ class App {
 			$ctrl='index';
 			$act='index';
 		}
-		return ['ctrl'=>$ctrl, 'act'=>$act];
+		return ['ctrl'=>$ctrl.'Ctrl', 'act'=>$act.'Act'];
 	}
 
 	public static function run() {
 		$router=self::router();
-		$ctrl=$router['ctrl'].'Ctrl';
+		$ctrl=$router['ctrl'];
 		$act=$router['act'];
 		$class=new $ctrl();
 		$class->$act();
