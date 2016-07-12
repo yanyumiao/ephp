@@ -1,9 +1,13 @@
 <?php 
+
 class DB {
-	public static $instance=[];
+	public static $mysql_db;
+	public static $redis_db;
 
-	public static function getInstance($config=[]){
-
+	public static function getMysqlDb($config=[]){
+		if(empty($config)) $config=$GLOBALS['config']['mysql'];
+		if(empty(self::$mysql_db[$config['dsn']])) self::$mysql_db[$config['dsn']] = new PDO($config['dsn'], $config['user'], $config['password']);
+		return self::$mysql_db[$config['dsn']];
 	}
 
 	public static function insert($table, $data, $config=[]){
