@@ -2,11 +2,12 @@
 
 $config=[
     'mysql'=>[
-		'host'    =>'127.0.0.1',
+    	'dsn'     =>'mysql:dbname=ephp;host=127.0.0.1',
 		'user'    =>'root',
 		'password'=>'',
-		'dbname'  =>'ephp'
     ],
+
+    //'mysql_read'=>[],
 
     'redis'=>[
 		'host'=>'127.0.0.1',
