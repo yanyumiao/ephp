@@ -32,7 +32,7 @@ class DB {
 		return $db->exec($sql);
 	}
 
-	public static function update($table, $filed, $where, $config=[]){
+	public static function update($table, $data, $where, $config=[]){
 
 	}
 
