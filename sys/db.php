@@ -31,7 +31,7 @@ class DB {
 	}
 
 	public static function update($table, $data, $where){
-
+		
 	}
 
 	public static function select($sql){
@@ -46,8 +46,6 @@ class DB {
 		$db=self::getMysqlInstance($config);
 		return $db->exec($sql);
 	}
-
-	public static function query($sql){
-
-	}
+	
 }
+
