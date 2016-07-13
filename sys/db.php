@@ -30,15 +30,15 @@ class DB {
 		return $pre->execute($values);
 	}
 
-	public static function update($table, $data, $where){
-		
+	public static function update($table, $data, $where, $config=''){
+			
 	}
 
-	public static function select($sql){
+	public static function select($pre_sql, $config=''){
 
 	}
 
-	public static function find($sql){
+	public static function find($pre_sql, $config){
 
 	}
 
