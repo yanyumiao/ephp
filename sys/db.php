@@ -22,8 +22,8 @@ class DB {
 		return self::$redis_instance[$config['host']];
 	}
 
-	public static function insert($table, $data, $config=[]){
-		$db=self::getMysqlInstance($config);
+	public static function insert($table, $data){
+		$db=self::getMysqlInstance();
 		foreach ($data as $k => $v){
 			$fields[] = $k;
 			$values[] = is_string($v) ? "'$v'" : $v;
@@ -32,23 +32,23 @@ class DB {
 		return $db->exec($sql);
 	}
 
-	public static function update($table, $data, $where, $config=[]){
+	public static function update($table, $data, $where){
 
 	}
 
-	public static function select($sql, $config=[]){
+	public static function select($sql){
 
 	}
 
-	public static function find($sql, $config=[]){
+	public static function find($sql){
 
 	}
 
-	public static function exec($sql, $cnofig=[]){
+	public static function exec($sql){
 
 	}
 
-	public static function query($sql, $config=[]){
+	public static function query($sql){
 
 	}
 }
