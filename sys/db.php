@@ -6,9 +6,8 @@ class DB {
 
 	public static function getMysqlInstance($config=''){
 		if(empty($config)) $config=$GLOBALS['config']['mysql'];
-		if(empty(self::$mysql_instance[$config['dsn']])) {
+		if(empty(self::$mysql_instance[$config['dsn']]))
 			self::$mysql_instance[$config['dsn']] = new PDO($config['dsn'], $config['user'], $config['password']);
-		}
 		return self::$mysql_instance[$config['dsn']];
 	}
 
@@ -22,19 +21,17 @@ class DB {
 		return self::$redis_instance[$config['host']];
 	}
 
-	public static function insert($table, $data){
-		$db=self::getMysqlInstance();
-		foreach ($data as $k => $v){
-			$fields[] = $k;
-			$values[] = $v;
-		}
+	public static function insert($table, $data, $config=''){
+		$db=self::getMysqlInstance($config);
+		$fields=array_keys($data);
+		$values=array_values($data);
 		$sql = 'INSERT INTO '.$table.' ('.implode(', ', $fields).') VALUES ('.placeholder(count($values)).')';
 		$pre=$db->prepare($sql);
 		return $pre->execute($values);
 	}
 
 	public static function update($table, $data, $where){
-		
+
 	}
 
 	public static function select($sql){
