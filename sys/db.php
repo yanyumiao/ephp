@@ -42,8 +42,9 @@ class DB {
 
 	}
 
-	public static function exec($sql){
-
+	public static function exec($sql, $config=''){
+		$db=self::getMysqlInstance($config);
+		return $db->exec($sql);
 	}
 
 	public static function query($sql){
