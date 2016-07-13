@@ -4,7 +4,7 @@ class DB {
 	public static $mysql_instance;
 	public static $redis_instance;
 
-	public static function getMysqlInstance($config=[]){
+	public static function getMysqlInstance($config=''){
 		if(empty($config)) $config=$GLOBALS['config']['mysql'];
 		if(empty(self::$mysql_instance[$config['dsn']])) {
 			self::$mysql_instance[$config['dsn']] = new PDO($config['dsn'], $config['user'], $config['password']);
@@ -12,7 +12,7 @@ class DB {
 		return self::$mysql_instance[$config['dsn']];
 	}
 
-	public static function getRedisInstance($config=[]){
+	public static function getRedisInstance($config=''){
 		if(empty($config)) $config=$GLOBALS['config']['redis'];
 		if(empty(self::$redis_instance[$config['host']])){
 			$redis=new Redis();
@@ -26,14 +26,15 @@ class DB {
 		$db=self::getMysqlInstance();
 		foreach ($data as $k => $v){
 			$fields[] = $k;
-			$values[] = is_string($v) ? "'$v'" : $v;
+			$values[] = $v;
 		}
-		$sql= 'INSERT INTO '.$table.' ('.implode(', ', $fields).') VALUES ('.implode(', ', $values).')';
-		return $db->exec($sql);
+		$sql = 'INSERT INTO '.$table.' ('.implode(', ', $fields).') VALUES ('.placeholder(count($values)).')';
+		$pre=$db->prepare($sql);
+		return $pre->execute($values);
 	}
 
 	public static function update($table, $data, $where){
-
+		
 	}
 
 	public static function select($sql){
