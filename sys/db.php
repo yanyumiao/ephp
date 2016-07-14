@@ -41,14 +41,6 @@ class DB {
 		return $pre->execute($values);
 	}
 	
-	/**
-	 * 适用查询结果集可能为多条的情况
-	 * 
-	 * @param string $sql ; 含有占位符'?'的sql语句
-	 * @param array $params ; 一维数组 由sql语句占位符的值组成
-	 * @param array $config
-	 * @return array
-	 */
 	public static function select($sql, $params, $config=''){
 		$db=self::getMysqlInstance($config);
 		$pre=$db->prepare($sql);
@@ -56,14 +48,6 @@ class DB {
 		return $pre->fetchAll(PDO::FETCH_ASSOC);
 	}
 
-	/**
-	 * 适用查询结果集为一条的情况
-	 * 
-	 * @param string $sql ; 含有占位符'?'的sql语句
-	 * @param array $params ; 一维数组 由sql语句占位符的值组成
-	 * @param array $config
-	 * @return array
-	 */
 	public static function find($sql, $params, $config=''){
 		$db=self::getMysqlInstance($config);
 		$pre=$db->prepare($sql);
