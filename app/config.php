@@ -2,8 +2,8 @@
 
 $config=[
     'mysql'=>[
-    	'dsn'     =>'mysql:dbname=ephp;host=127.0.0.1',
-		'user'    =>'root',
+    	'dsn'=>'mysql:dbname=ephp;host=127.0.0.1',
+		'user'=>'root',
 		'password'=>'',
     ],
 
