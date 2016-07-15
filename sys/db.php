@@ -55,10 +55,10 @@ class DB {
 		return $pre->fetch(PDO::FETCH_ASSOC);
 	}
 
-	public static function exec($sql, $config=''){
+	public static function delete($sql, $params, $config=''){
 		$db=self::getMysqlInstance($config);
-		return $db->exec($sql);
+		$pre=$db->prepare($sql);
+		return $pre->execute($params);
 	}
-	
 }
 
