@@ -25,7 +25,7 @@ class DB {
 		$db=self::getMysqlInstance($config);
 		$fields=array_keys($data);
 		$values=array_values($data);
-		$sql='INSERT INTO '.$table.'('.implode(',',$fields).') VALUES('.trim(str_repeat('?,',count($values)),',').')';
+		$sql='INSERT INTO '.$table.' ('.implode(',',$fields).') VALUES ('.trim(str_repeat('?,',count($values)),',').')';
 		$pre=$db->prepare($sql);
 		return $pre->execute($values);
 	}
