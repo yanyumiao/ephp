@@ -1,7 +1,7 @@
-# About
-Ephp, easy php framework 
+# About 
+Easy php framework 
 
-# Rewrite rule
+# Rewrite
 <IfModule mod_rewrite.c>
 	RewriteEngine on
 	RewriteCond %{REQUEST_FILENAME} !-d
