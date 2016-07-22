@@ -33,9 +33,15 @@ class DB {
 	public static function update($table, $data, $where, $config=''){
 		$db=self::getMysqlInstance($config);
 		$sql="UPDATE $table SET ";
-		foreach($data as $k => $v){$sql.="$k=?,";$values[]=$v;}
+		foreach($data as $k => $v){
+			$sql.="$k=?,";
+			$values[]=$v;
+		}
 		$sql=rtrim($sql, ',').' WHERE';
-		foreach($where as $k => $v){$sql.=" $k=? AND";$values[]=$v;}
+		foreach($where as $k => $v){
+			$sql.=" $k=? AND";
+			$values[]=$v;
+		}
 		$sql=rtrim($sql, ' AND');
 		$pre=$db->prepare($sql);
 		return $pre->execute($values);
