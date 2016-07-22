@@ -1,9 +1,7 @@
 <?php
 
 class App {
-	public static function init(){
-
-	}
+	public static function init(){}
 
 	public static function router(){
 		if(!empty($_SERVER['PATH_INFO'])) {
