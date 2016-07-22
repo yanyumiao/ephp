@@ -2,6 +2,6 @@
 
 class indexCtrl extends ctrl {
 	public function indexAct(){
-		echo 'Welcome to easyphp';
+		echo 'Easy PHP';
 	}
 }
