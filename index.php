@@ -15,6 +15,7 @@ define('PATH_LOG',     PATH_APP.'log/');
 
 //
 define('CURRENT_TIME', time());
+define('CURRENT_DATE', date('Ymd', CURRENT_TIME));
 
 //
 require PATH_APP.'config.php';
