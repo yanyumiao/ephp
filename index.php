@@ -1,6 +1,6 @@
 <?php
 /**
- * Ephp, easy php framework
+ * easyphp, easy php framework
  * (c) 2015 YanYuMiao
  *
  */
