@@ -1,6 +1,10 @@
 <?php
 
 class App {
+	public static function init(){
+
+	}
+
 	public static function router(){
 		if(!empty($_SERVER['PATH_INFO'])) {
 			$path=$_SERVER['PATH_INFO'];
@@ -15,6 +19,7 @@ class App {
 	}
 
 	public static function run() {
+		self::init();
 		$router=self::router();
 		$ctrl=$router['ctrl'];
 		$act=$router['act'];
