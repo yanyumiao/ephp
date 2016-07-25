@@ -6,8 +6,8 @@
  */
 
 //
-define('PATH_SYS', './sys/');
-define('PATH_APP', './app/');
+define('PATH_SYS', '../sys/');
+define('PATH_APP', '../app/');
 define('PATH_MODEL',   PATH_APP.'model/');
 define('PATH_SERVICE', PATH_APP.'service/');
 define('PATH_CTRL',    PATH_APP.'ctrl/');
