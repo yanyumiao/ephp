@@ -6,7 +6,7 @@ class App {
 	}
 
 	public static function router(){
-		if(!empty($_SERVER['PATH_INFO'])) {
+		if(isset($_SERVER['PATH_INFO'])) {
 			$path=$_SERVER['PATH_INFO'];
 			$path_arr=explode('/', $path);
 			$ctrl=$path_arr[1];

@@ -22,7 +22,7 @@ function request_log(){
 	$file=PATH_LOG.CURRENT_DATE.'.request';
 	$method=$_SERVER['REQUEST_METHOD']; // GET, HEAD, POST, PUT 
 
-	$url=$_SERVER['PATH_INFO'];
+	$url=isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/index/index';
 	if($_SERVER['QUERY_STRING']) $url.='?'.$_SERVER['QUERY_STRING'];
 
 	$content='';
