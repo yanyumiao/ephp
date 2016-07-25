@@ -43,6 +43,6 @@ function request_log(){
 			$content=$method; // ...
 			break;
 	}
-	$content.=LF;
+	$content.=PHP_EOL;
 	write_log($file, $content);
 }

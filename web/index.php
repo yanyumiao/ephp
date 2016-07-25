@@ -18,9 +18,6 @@ define('CURRENT_TIME', time());
 define('CURRENT_DATE', date('Ymd', CURRENT_TIME));
 
 //
-define('LF', "\r\n"); // line feed // win "\r\n" ; linux "\n"
-
-//
 require PATH_APP.'config.php';
 require PATH_SYS.'app.php';
 require PATH_SYS.'function.php';
