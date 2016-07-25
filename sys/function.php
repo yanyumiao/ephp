@@ -22,7 +22,9 @@ function request_log(){
 	$file=PATH_LOG.CURRENT_DATE.'.request';
 	$method=$_SERVER['REQUEST_METHOD']; // GET, HEAD, POST, PUT 
 
-	$url=isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/index/index';
+	$url='';
+	if(isset($_SERVER['PATH_INFO']) && !empty($_SERVER['PATH_INFO'])) // apache && nginx 
+		$url=$_SERVER['PATH_INFO']; 
 	if($_SERVER['QUERY_STRING']) $url.='?'.$_SERVER['QUERY_STRING'];
 
 	$content='';
@@ -44,5 +46,6 @@ function request_log(){
 			break;
 	}
 	$content.=PHP_EOL; //
+
 	write_log($file, $content);
 }
