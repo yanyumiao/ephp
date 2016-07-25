@@ -33,9 +33,9 @@ function request_log(){
 
 		case 'POST':
 			if($input=file_get_contents('php://input')){
-				$content='INPUT '.$url.' '.$input;
+				$content='INPUT '.$url.'?'.$input;
 			}else{
-				$content='POST '.$url.' '.http_build_str($post);
+				$content='POST '.$url.'?'.http_build_str($_POST);
 			}
 			break;
 		
@@ -43,6 +43,6 @@ function request_log(){
 			$content=$method; // ...
 			break;
 	}
-	$content.=PHP_EOL;
+	$content.=PHP_EOL; //
 	write_log($file, $content);
 }
