@@ -6,7 +6,7 @@ class App {
 	}
 
 	public static function router(){
-		if(isset($_SERVER['PATH_INFO']) && !empty($_SERVER['PATH_INFO'])) { // apache & nginx
+		if(isset($_SERVER['PATH_INFO']) && !empty($_SERVER['PATH_INFO'])) { // apache && nginx
 			$path=explode('/', trim($_SERVER['PATH_INFO'], '/'));
 			$ctrl=$path[0];
 			$act=isset($path[1]) ? $path[1] : 'index';                           
