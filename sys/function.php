@@ -8,9 +8,9 @@ function autoload($class){
 // Avoid http_build_query() auto urlencode params
 function http_build_str($data){
 	foreach($data as $k => $v) {
-		$arr[] = "$k=$v";
+		$str .= "{$k}={$v}&";
 	}
-	return implode('&', $arr);
+	return rtrim($str, '&');
 }
 
 function write_log($file, $content){
