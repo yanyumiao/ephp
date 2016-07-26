@@ -2,7 +2,7 @@
 
 $config=[
     'mysql'=>[
-    	'dsn'=>'mysql:dbname=ephp;host=127.0.0.1',
+    	'dsn'=>'mysql:dbname=easyphp;host=localhost',
 		'user'=>'root',
 		'password'=>'',
     ],
