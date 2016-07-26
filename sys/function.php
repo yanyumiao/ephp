@@ -28,24 +28,13 @@ function request_log(){
 	if($_SERVER['QUERY_STRING']) $url.='?'.$_SERVER['QUERY_STRING'];
 
 	$content='';
-	switch ($method) {
-		case 'GET':
-			$content='GET '.$url;
-			break;
-
-		case 'POST':
-			if($input=file_get_contents('php://input')){
-				$content='INPUT '.$url.'?'.$input;
-			}else{
-				$content='POST '.$url.'?'.http_build_str($_POST);
-			}
-			break;
-		
-		default:
-			$content=$method; // ...
-			break;
+	if($method == 'GET') $content='GET '.$url;
+	if($method == 'POST') {
+		if($input=file_get_contents('php://input'))
+			$content='INPUT '.$url.'?'.$input;
+		else
+			$content='POST '.$url.'?'.http_build_str($_POST);
 	}
-	$content.=PHP_EOL; //
 
-	write_log($file, $content);
+	write_log($file, $content.PHP_EOL);
 }
