@@ -3,6 +3,7 @@
 function autoload($class){
 	if(file_exists(PATH_CTRL.$class.'.php')) require_once PATH_CTRL.$class.'.php';
 	if(file_exists(PATH_MODEL.$class.'.php')) require_once PATH_MODEL.$class.'.php';
+	if(file_exists(PATH_SERVICE.$class.'.php')) require_once PATH_SERVICE.$class.'.php';
 }
 
 // Avoid http_build_query() auto urlencode params
