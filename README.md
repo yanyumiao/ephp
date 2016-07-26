@@ -1,7 +1,7 @@
-### About 
+#### About 
 Easy php framework 
 
-### Rewrite
+#### Rewrite
 <IfModule mod_rewrite.c>  
 	RewriteEngine on  
 	RewriteCond %{REQUEST_FILENAME} !-d  
@@ -9,6 +9,6 @@ Easy php framework
 	RewriteRule ^(.*)$ index.php/$1 [L]  
 </IfModule>  
 
-### Copyright
+#### Copyright
 (c) 2015 YanYuMiao
 
