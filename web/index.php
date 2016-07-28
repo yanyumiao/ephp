@@ -20,7 +20,7 @@ define('CURRENT_TIME', time());
 define('CURRENT_DATE', date('Ymd', CURRENT_TIME));
 
 //
-require PATH_CONFIG.'config.php';
+require PATH_CONFIG.'db_config.php';
 require PATH_SYS.'app.php';
 require PATH_SYS.'function.php';
 require PATH_SYS.'ctrl.php';
