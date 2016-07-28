@@ -5,7 +5,7 @@ class DB {
 	public static $redis_instance;
 
 	public static function getMysqlInstance($config=''){
-		if(empty($config)) $config=$GLOBALS['config']['mysql'];
+		if(empty($config)) $config=$GLOBALS['db_config']['mysql'];
 		if(empty(self::$mysql_instance[$config['dsn']]))
 			self::$mysql_instance[$config['dsn']] = new PDO($config['dsn'], $config['user'], $config['password']);
 		return self::$mysql_instance[$config['dsn']];

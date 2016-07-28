@@ -1,6 +1,6 @@
 <?php 
 
-$config=[
+$db_config=[
     'mysql'=>[
     	'dsn'=>'mysql:dbname=easyphp;host=localhost',
 		'user'=>'root',
