@@ -8,6 +8,8 @@
 //
 define('PATH_SYS', '../sys/');
 define('PATH_APP', '../app/');
+
+define('PATH_CONFIG',  PATH_APP.'config/');
 define('PATH_MODEL',   PATH_APP.'model/');
 define('PATH_SERVICE', PATH_APP.'service/');
 define('PATH_CTRL',    PATH_APP.'ctrl/');
@@ -18,7 +20,7 @@ define('CURRENT_TIME', time());
 define('CURRENT_DATE', date('Ymd', CURRENT_TIME));
 
 //
-require PATH_APP.'config.php';
+require PATH_CONFIG.'config.php';
 require PATH_SYS.'app.php';
 require PATH_SYS.'function.php';
 require PATH_SYS.'ctrl.php';
