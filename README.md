@@ -70,6 +70,7 @@ mysql> SELECT * FROM user;
 | b        | 3     |  
 +----------+-------+  
 
+<?php
 DB::insert('user', ['user'=>'a', 'phone'=>1]);
 DB::update('user', ['phone'=>1], ['user'=>a]);
 DB::select('user', 'SELECT * FROM `user` WHERE username=?', ['a']);
