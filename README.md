@@ -18,7 +18,7 @@ easyphp是一个非常简单的php框架，全部框架的实现只使用了很�
 如果需要视图引擎的支持，系统已经为你引入了smarty作为视图引擎  
 只需要将smarty中libs目录copy到~/app/lib/smarty目录下即可 测试支持smarty2 smarty3  
 
-#### 使用
+#### 访问
 127.0.0.1/index.php/controller/action  
 
 #### 去掉index.php
@@ -59,3 +59,19 @@ location ~ .+\.php($|/) {
 cgi.fix_pathinfo=1
 ```
 
+#### DB操作
+示例表(user)：
++----------+-------+
+| username | phone |
++----------+-------+
+| a        | 1     |
+| a        | 2     |
+| b        | 3     |
++----------+-------+
+```
+* DB::insert('user', ['user'=>'a', 'phone'=>1]);
+* DB::update('user', ['phone'=>1], ['user'=>a]);
+* DB::select('user', 'SELECT * FROM `user` WHERE username=?', ['a']);
+* DB::find('user', 'SELECT * FROM `user` WHERE phone=?', [1]);
+* DB::delet('user', ['phone'=>'1']);
+```
