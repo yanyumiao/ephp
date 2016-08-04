@@ -61,6 +61,7 @@ cgi.fix_pathinfo=1
 
 #### DB操作
 示例表(user)：  
+```
 +----------+-------+  
 | username | phone |  
 +----------+-------+  
@@ -68,10 +69,10 @@ cgi.fix_pathinfo=1
 | a        | 2     |  
 | b        | 3     |  
 +----------+-------+  
-```
-* DB::insert('user', ['user'=>'a', 'phone'=>1]);
-* DB::update('user', ['phone'=>1], ['user'=>a]);
-* DB::select('user', 'SELECT * FROM `user` WHERE username=?', ['a']);
-* DB::find('user', 'SELECT * FROM `user` WHERE phone=?', [1]);
-* DB::delet('user', ['phone'=>'1']);
+
+DB::insert('user', ['user'=>'a', 'phone'=>1]);
+DB::update('user', ['phone'=>1], ['user'=>a]);
+DB::select('user', 'SELECT * FROM `user` WHERE username=?', ['a']);
+DB::find('user', 'SELECT * FROM `user` WHERE phone=?', [1]);
+DB::delet('user', ['phone'=>'1']);
 ```
