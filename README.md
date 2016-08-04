@@ -28,7 +28,7 @@ easyphp是一个非常简单的php框架，全部框架的实现只使用了很�
 	RewriteRule ^(.*)$ index.php/$1 [L]  
 </IfModule>  
 ```
-* nginx 配置('...'表示省略)
+* nginx 配置(...表示省略)
 ``` 
 ...
 location /{
