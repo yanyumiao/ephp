@@ -55,6 +55,4 @@ location ~ .+\.php($|/) {
 # php.ini
 cgi.fix_pathinfo=1
 ```
-#### Copyright
-(c) 2015 YanYuMiao
 
