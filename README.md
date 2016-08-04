@@ -30,6 +30,7 @@ easyphp是一个非常简单的php框架，全部框架的实现只使用了很�
 ```
 2 nginx 配置(...表示省略)
 ``` 
+# nginx
 ...
 location /{
     ...
@@ -50,6 +51,9 @@ location ~ .+\.php($|/) {
     ...
 }
 ...
+
+# php.ini
+cgi.fix_pathinfo=1
 ```
 #### Copyright
 (c) 2015 YanYuMiao
