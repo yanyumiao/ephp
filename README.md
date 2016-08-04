@@ -1,8 +1,8 @@
 #### 关于easyphp 
 easyphp是一个非常简单的php框架，全部框架的实现只使用了很少的代码  
 
-==熟练的PHPer只需要花费10分钟便可阅读框架的全部代码(web/index.php sys/* lib/smartyLib.php)==    
-==如果觉得那里不爽，分分钟改造成你自己想要的样子==    
+==熟练的PHPer只需要花费10分钟便可阅读框架的全部代码(web/index.php sys/* lib/smartyLib.php)==      
+==如果觉得那里不爽，分分钟改造成你自己想要的样子==      
 
 #### 特性
 * 简单 粗暴  
