@@ -19,7 +19,7 @@ easyphp是一个非常简单的php框架，全部框架的实现只使用了很�
 127.0.0.1/index.php/controller/action  
 
 #### 去掉index.php
-* apache 添加.htaccss文件到~/web目录即可  
+1 apache 添加.htaccss文件到~/web目录即可  
 ```
 <IfModule mod_rewrite.c>  
 	RewriteEngine on  
@@ -28,7 +28,7 @@ easyphp是一个非常简单的php框架，全部框架的实现只使用了很�
 	RewriteRule ^(.*)$ index.php/$1 [L]  
 </IfModule>  
 ```
-* nginx 配置(...表示省略)
+2 nginx 配置(...表示省略)
 ``` 
 ...
 location /{
