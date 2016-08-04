@@ -60,8 +60,8 @@ cgi.fix_pathinfo=1
 ```
 
 #### DB操作
-示例表(user)：  
 ```
+mysql> SELECT * FROM user;
 +----------+-------+  
 | username | phone |  
 +----------+-------+  
