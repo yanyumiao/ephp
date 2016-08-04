@@ -71,8 +71,8 @@ mysql> SELECT * FROM user;
 +----------+-------+  
 
 <?php
-DB::insert('user', ['user'=>'a', 'phone'=>1]);
-DB::update('user', ['phone'=>1], ['user'=>a]);
+DB::insert('user', ['username'=>'a', 'phone'=>1]);
+DB::update('user', ['phone'=>1], ['username'=>a]);
 DB::select('user', 'SELECT * FROM `user` WHERE username=?', ['a']);
 DB::find('user', 'SELECT * FROM `user` WHERE phone=?', [1]);
 DB::delet('user', ['phone'=>'1']);
