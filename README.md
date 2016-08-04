@@ -37,24 +37,16 @@ nginx 配置(...表示省略)
 ...
 location /{
     ...
-    index index.php;
-    if (-e $request_filename) {
-        break;
-    }
     if (!-e $request_filename) {
         rewrite ^/(.*)$ /index.php/$1 last;
         break;
     }
 }
-...
 location ~ .+\.php($|/) {
     ...
     fastcgi_split_path_info ^(.+\.php)(.*)$;
     fastcgi_param PATH_INFO $fastcgi_path_info;
-    ...
 }
-...
-
 # php.ini
 cgi.fix_pathinfo=1
 ```
