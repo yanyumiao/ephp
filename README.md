@@ -1,13 +1,13 @@
 #### 关于easyphp 
 easyphp是一个非常简单的php框架，全部框架的实现只使用了很少的代码  
 
-_熟练的PHPer只需要花费10分钟便可阅读框架的全部代码(web/index.php sys/* lib/smartyLib.php)_      
-_如果觉得那里不爽，分分钟改造成你自己想要的样子_      
+熟练的PHPer只需要花费10分钟便可阅读框架的全部代码(web/index.php sys/* lib/smartyLib.php)  
+如果觉得那里不爽，分分钟改造成你自己想要的样子      
 
 #### 特性
 * 简单 粗暴  
 * 可定制 因为太简单 所以可以很轻松的阅读和修改框架 定制成你想要的样子
-* MVC分层 至于SERVICE层 用不用是你的事哈  
+* MVC分层 至于SERVICE层 用不用由工程师自己决定    
 * 访问日志 默认开启的  
 * DB类 使用PDO prepare实现 防止SQL注入  
 * xss过滤  
