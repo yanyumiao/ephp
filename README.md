@@ -15,7 +15,7 @@ easyphp是一个非常简单的php框架，全部框架的实现只使用了很�
 如果需要视图引擎的支持，系统已经为你引入了smarty作为视图引擎  
 只需要将smarty中libs目录copy到~/app/lib/smarty目录下即可 测试支持smarty2 smarty3  
 
-#### 访问
+#### 使用
 127.0.0.1/index.php/controller/action  
 
 #### 去掉index.php
