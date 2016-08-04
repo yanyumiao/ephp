@@ -31,7 +31,7 @@ apache 添加.htaccss文件到~/web目录即可
 	RewriteRule ^(.*)$ index.php/$1 [L]  
 </IfModule>  
 ```
-nginx 配置
+nginx 配置(php.ini 中 cgi.fix_pathinfo=1  )
 ``` 
 location /{
     ...
@@ -46,8 +46,6 @@ location ~ .+\.php($|/) {
     fastcgi_param PATH_INFO $fastcgi_path_info;
 }
 ```
-补充：php.ini cgi.fix_pathinfo=1  
-
 
 #### DB操作
 ```
