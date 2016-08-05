@@ -4,9 +4,10 @@ easyphp是一个非常简单的php框架，全部框架的实现只使用了很�
 #### 特性
 * 实现简单 源码易读   
 * MVC分层 SERVICE层可选  
-* 访问日志 默认开启的  
-* DB类 单例 & PDO prepare实现 防止SQL注入  
+* 动态加载smarty  
+* DB类 单例 PDO prepare 防SQL注入  
 * xss过滤  
+* 实用日志  
 
 #### 目录结构
 ```
