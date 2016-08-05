@@ -1,6 +1,5 @@
 #### 关于easyphp 
-easyphp是一个非常简单的php框架，全部框架的实现只使用了很少的代码  
-熟练的PHPer只需要花费10分钟即可阅读框架的全部代码(web/index.php sys/* lib/smartyLib.php)  
+easyphp是一个非常简单的php框架，全部框架的实现只使用了很少的代码    
 
 #### 特性
 * 实现简单 源码易读   
@@ -12,29 +11,30 @@ easyphp是一个非常简单的php框架，全部框架的实现只使用了很�
 #### 目录结构
 ```
 │  README.md  
-├─app(web应用)
-│  ├─config
-│  │      db_config.php
-│  ├─ctrl
-│  │      indexCtrl.php
-│  ├─lib(第三方类库)
-│  │  │  smartyLib.php
-│  │  └─smarty
-│  ├─log
-│  ├─model
-│  ├─service
-│  └─view
-│      ├─cache
-│      ├─compile
-│      └─html
-├─sys(框架)
-│      app.php
-│      ctrl.php
-│      db.php
-│      function.php
-└─web
-        index.php
+├─app (web应用)
+│  ├─config (配置目录)
+│  │      db_config.php (db配置)
+│  ├─ctrl (控制器目录)
+│  │      indexCtrl.php (默认控制器)
+│  ├─lib (第三方类库)
+│  │  │  smartyLib.php (动态引入smarty)
+│  │  └─smarty (smarty/libs)
+│  ├─log (日志目录)
+│  ├─model (模型目录)
+│  ├─service (服务目录)
+│  └─view (视图目录)
+│      ├─cache (视图缓存目录)
+│      ├─compile (视图编译目录)
+│      └─html (视图模板目录)
+├─sys (框架目录)
+│      app.php (核心类)
+│      ctrl.php (控制器基类)
+│      db.php (DB类)
+│      function.php (函数库)
+└─web (web入口)
+    index.php (入口文件) 
 ```
+
 #### 安装
 * 数据库配置，~/app/db_config.php  
 * 添加smarty，将smarty中libs目录copy到~/app/lib/smarty目录    
@@ -87,4 +87,7 @@ DB::find('user', 'SELECT * FROM `user` WHERE phone=?', ['1']);
 DB::delet('user', ['phone'=>'1']);
 ```
 
-####   
+#### 日志
+系统默认开启访问日志，App::init()中调用request_log()方法实现  
+日志文件命名采用日期加后缀的格式，如20160805.request 20160805.debug  
+
