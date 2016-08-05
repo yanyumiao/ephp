@@ -1,22 +1,43 @@
 #### 关于easyphp 
 easyphp是一个非常简单的php框架，全部框架的实现只使用了很少的代码  
-
-熟练的PHPer只需要花费10分钟便可阅读框架的全部代码(web/index.php sys/* lib/smartyLib.php)  
-如果觉得那里不爽，分分钟改造成你自己想要的样子      
+熟练的PHPer只需要花费10分钟即可阅读框架的全部代码(web/index.php sys/* lib/smartyLib.php)  
 
 #### 特性
-* 简单 粗暴  
-* 可定制 因为太简单 所以可以很轻松的阅读和修改框架 定制成你想要的样子
-* MVC分层 至于SERVICE层 用不用由工程师自己决定    
+* 实现简单 源码易读   
+* MVC分层 SERVICE层可选  
 * 访问日志 默认开启的  
-* DB类 使用PDO prepare实现 防止SQL注入  
+* DB类 单例 & PDO prepare实现 防止SQL注入  
 * xss过滤  
 
+#### 目录结构
+```
+│  README.md  
+├─app(web应用)
+│  ├─config
+│  │      db_config.php
+│  ├─ctrl
+│  │      indexCtrl.php
+│  ├─lib(第三方类库)
+│  │  │  smartyLib.php
+│  │  └─smarty
+│  ├─log
+│  ├─model
+│  ├─service
+│  └─view
+│      ├─cache
+│      ├─compile
+│      └─html
+├─sys(框架)
+│      app.php
+│      ctrl.php
+│      db.php
+│      function.php
+└─web
+        index.php
+```
 #### 安装
-你需要做的仅仅是修改一下数据库配置文件，~/app/db_config.php  
-
-如果需要视图引擎的支持，系统已经为你引入了smarty作为视图引擎  
-只需要将smarty中libs目录copy到~/app/lib/smarty目录下即可 测试支持smarty2 smarty3  
+* 数据库配置，~/app/db_config.php  
+* 添加smarty，将smarty中libs目录copy到~/app/lib/smarty目录    
 
 #### 访问
 127.0.0.1/index.php/controller/action  
@@ -65,3 +86,5 @@ DB::select('user', 'SELECT * FROM `user` WHERE username=?', ['a']);
 DB::find('user', 'SELECT * FROM `user` WHERE phone=?', ['1']);
 DB::delet('user', ['phone'=>'1']);
 ```
+
+####   
