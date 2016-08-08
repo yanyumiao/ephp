@@ -42,7 +42,8 @@ easyphp是一个非常简单的php框架，全部框架的实现只使用了很�
 * 添加smarty，将smarty中libs目录copy到~/app/lib/smarty目录    
 
 #### 访问
-127.0.0.1/index.php/controller/action  
+例：host/index.php/user/login 访问userCtrl控制器loginAction方法  
+控制器类名采用Ctrl后缀 方法名采用Action后缀  
 
 #### 去掉index.php
 apache 添加.htaccss文件到~/web目录即可  
@@ -100,4 +101,3 @@ userCtrl(控制器) userMode(模型名) userService(服务名)
   
 
 
-  
