@@ -41,9 +41,9 @@ easyphp是一个非常简单的php框架，全部框架的实现只使用了很�
 * 数据库配置，~/app/db_config.php  
 * 添加smarty，将smarty中libs目录copy到~/app/lib/smarty目录    
 
-#### 访问
-例：host/index.php/user/login 访问userCtrl控制器loginAction方法  
-控制器类名采用Ctrl后缀 方法名采用Action后缀  
+#### 路由
+例：host/index.php/user/login 访问userCtrl控制器loginAct方法  
+控制器类名采用Ctrl后缀 方法名采用Act后缀  
 
 #### 去掉index.php
 apache 添加.htaccss文件到~/web目录即可  
@@ -99,5 +99,3 @@ DB::delet('user', ['phone'=>'1']);
 Controller Model Service 此类文件名推荐使用小驼峰加特定后缀的方式命名 例如：  
 userCtrl(控制器) userMode(模型名) userService(服务名)  
   
-
-
