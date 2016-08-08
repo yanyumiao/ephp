@@ -5,6 +5,3 @@ php:
   - 5.6
   - 7.0
   - nightly
-env:
-  - DB=MySQL
-  - DB=Redis
