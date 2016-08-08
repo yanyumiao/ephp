@@ -92,3 +92,8 @@ DB::delet('user', ['phone'=>'1']);
 #### 日志
 系统默认开启访问日志，日志文件命名采用日期加后缀的格式  
 例如: 20160805.request 20160805.debug  
+
+#### 命名规范
+没有严格的命名规范，求代码紧凑、清晰、简洁就可以了  
+推荐Controller Model Service 此类文件名推荐使用小驼峰 加特定后缀的方式命名   
+例如：userCtrl(控制器) userMode(模型名) userService(服务名)  
