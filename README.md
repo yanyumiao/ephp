@@ -33,8 +33,8 @@ easyphp是一个非常简单的php框架，全部框架的实现只使用了很�
 │      ctrl.php (控制器基类)
 │      db.php (DB类)
 │      function.php (函数库)
-└─web (web入口目录)
-        index.php (入口文件) 
+└─web (web入口目录)  
+       index.php (入口文件) 
 ```
 
 #### 安装
