@@ -9,13 +9,13 @@
 define('PATH_SYS', '../sys/');
 define('PATH_APP', '../app/');
 
-define('PATH_CONFIG',  PATH_SYS.'config/');
+define('PATH_CONFIG',  PATH_APP.'config/');
 define('PATH_MODEL',   PATH_APP.'model/');
 define('PATH_SERVICE', PATH_APP.'service/');
 define('PATH_CTRL',    PATH_APP.'ctrl/');
 define('PATH_VIEW',    PATH_APP.'view/');
 define('PATH_LOG',     PATH_APP.'log/');
-define('PATH_LIB',     PATH_SYS.'lib/');
+define('PATH_LIB',     PATH_APP.'lib/');
 
 //
 define('CURRENT_TIME', time());
