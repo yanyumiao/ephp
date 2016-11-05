@@ -26,3 +26,4 @@ class App {
 		$class->$act();
 	}
 }
+

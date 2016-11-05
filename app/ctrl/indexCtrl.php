@@ -12,3 +12,4 @@ class indexCtrl extends ctrl {
 		//$this->display('index.html');
 	}
 }
+
