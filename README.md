@@ -1,5 +1,5 @@
-#### 关于easyphp 
-easyphp是一个非常简单的php框架，全部框架的实现只使用了很少的代码    
+#### 关于ephp 
+ephp是一个非常简单的php框架，全部框架的实现只使用了很少的代码    
 [![Code Climate](https://codeclimate.com/repos/57a7f438c5e93f007d000e5d/badges/a83beb52edc27bdd52c1/gpa.svg)](https://codeclimate.com/repos/57a7f438c5e93f007d000e5d/feed)  
 
 #### 特性
